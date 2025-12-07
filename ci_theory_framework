@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CI Adoption & Reinvention Framework (DRMS + DOI + CoP)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f6f7fb;
+    }
+    svg {
+      display: block;
+      margin: 0 auto;
+      background: #ffffff;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+
+    /* Text styles */
+    .title { font-size: 18px; font-weight: 600; }
+    .subtitle { font-size: 14px; font-weight: 600; }
+    .box-title { font-size: 13px; font-weight: 600; }
+    .box-text { font-size: 11px; }
+    .prediction-title { font-size: 11px; font-weight: 700; }
+    .prediction-text { font-size: 10px; }
+
+    /* Colors (easy to change) */
+    .drms-box { fill: #0b1f3b; stroke: #0b1f3b; }
+    .drms-inner-text { fill: #ffffff; }
+    .doicop-box { fill: #2b7a78; stroke: #145c5a; }
+
+    .level-macro { fill: #5bc0de; stroke: #3399bb; }
+    .level-meso  { fill: #8fd19e; stroke: #5ca96d; }
+    .level-micro { fill: #f7f7f7; stroke: #b0b0b0; }
+
+    .outcome-box { fill: #1b7a4e; stroke: #145538; }
+    .outcome-text { fill: #ffffff; }
+
+    .prediction-box { fill: #ffe8b3; stroke: #e0b96b; }
+
+    .arrow { stroke: #444; stroke-width: 2; fill: none; }
+    .feedback-arrow { stroke-dasharray: 6 4; }
+  </style>
+</head>
+<body>
+
+<svg width="1200" height="700" viewBox="0 0 1200 700">
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6"
+            refX="7" refY="3" orient="auto" fill="#444">
+      <polygon points="0 0, 8 3, 0 6" />
+    </marker>
+  </defs>
+
+  <!-- Overall title -->
+  <text x="600" y="35" text-anchor="middle" class="title">
+    CI Adoption and Reinvention Framework: DRMS + DOI + CoP
+  </text>
+
+  <!-- Column labels -->
+  <text x="180" y="70" text-anchor="middle" class="subtitle">Theoretical foundations</text>
+  <text x="600" y="70" text-anchor="middle" class="subtitle">Three organizational levels</text>
+  <text x="980" y="70" text-anchor="middle" class="subtitle">Decision trajectories</text>
+
+  <!-- ========== LEFT COLUMN: DRMS BACKBONE + DOI + CoP ========== -->
+
+  <!-- DRMS backbone box -->
+  <rect x="60" y="95" rx="12" ry="12" width="240" height="250"
+        class="drms-box" />
+
+  <text x="80" y="120" class="box-title drms-inner-text">
+    DRMS (backbone)
+  </text>
+  <text x="80" y="140" class="box-text drms-inner-text">
+    Decision, risk, and management sciences
+  </text>
+  <text x="80" y="160" class="box-text drms-inner-text">
+    • Risk perception and trust
+  </text>
+  <text x="80" y="177" class="box-text drms-inner-text">
+    • Organizational design and governance
+  </text>
+  <text x="80" y="194" class="box-text drms-inner-text">
+    • Tradeoffs under uncertainty
+  </text>
+  <text x="80" y="211" class="box-text drms-inner-text">
+    • Distributed decision processes
+  </text>
+
+  <!-- DOI box inside DRMS -->
+  <rect x="75" y="230" rx="8" ry="8" width="210" height="70"
+        class="doicop-box" />
+  <text x="85" y="250" class="box-title" fill="#ffffff">
+    Diffusion of Innovations (DOI)
+  </text>
+  <text x="85" y="270" class="box-text" fill="#e9fdfb">
+    Stages of adoption, reinvention,
+  </text>
+  <text x="85" y="286" class="box-text" fill="#e9fdfb">
+    agenda setting to routinizing
+  </text>
+
+  <!-- CoP box inside DRMS -->
+  <rect x="75" y="310" rx="8" ry="8" width="210" height="70"
+        class="doicop-box" />
+  <text x="85" y="330" class="box-title" fill="#ffffff">
+    Communities of Practice (CoP)
+  </text>
+  <text x="85" y="350" class="box-text" fill="#e9fdfb">
+    Shared practice, tacit knowledge,
+  </text>
+  <text x="85" y="366" class="box-text" fill="#e9fdfb">
+    storytelling, boundary spanning
+  </text>
+
+  <!-- Arrows from DRMS backbone to each level (center column) -->
+  <line x1="300" y1="170" x2="510" y2="170"
+        class="arrow" marker-end="url(#arrowhead)" />
+  <line x1="300" y1="300" x2="510" y2="300"
+        class="arrow" marker-end="url(#arrowhead)" />
+  <line x1="300" y1="430" x2="510" y2="430"
+        class="arrow" marker-end="url(#arrowhead)" />
+
+  <text x="310" y="160" class="box-text">DRMS + DOI + CoP inform</text>
+  <text x="310" y="178" class="box-text">macro, meso, and micro levels</text>
+
+  <!-- ========== CENTER COLUMN: MACRO, MESO, MICRO ========== -->
+
+  <!-- Macro level box -->
+  <rect x="510" y="115" rx="12" ry="12" width="280" height="120"
+        class="level-macro" />
+  <text x="525" y="135" class="box-title">
+    Macro level: Governance and environment
+  </text>
+  <text x="525" y="153" class="box-text">
+    NSF mandates, funding structures, formal CI decision
+  </text>
+  <text x="525" y="168" class="box-text">
+    bodies (boards, steering committees, PMOs), policies, CI strategies
+  </text>
+  <text x="525" y="188" class="box-text">
+    → Define agenda for CI change, acceptable risk thresholds,
+  </text>
+  <text x="525" y="203" class="box-text">
+    resource priorities
+  </text>
+
+  <!-- Meso level box -->
+  <rect x="510" y="275" rx="12" ry="12" width="280" height="120"
+        class="level-meso" />
+  <text x="525" y="295" class="box-title">
+    Meso level: CoPs and organizational arrangements
+  </text>
+  <text x="525" y="313" class="box-text">
+    CoPs across roles and sites; cross-functional working groups;
+  </text>
+  <text x="525" y="328" class="box-text">
+    boundary-spanning roles; informal networks
+  </text>
+  <text x="525" y="348" class="box-text">
+    → Interpret and renegotiate mandates; shared risk sensemaking;
+  </text>
+  <text x="525" y="363" class="box-text">
+    local reinvention and workarounds
+  </text>
+
+  <!-- Micro level box -->
+  <rect x="510" y="435" rx="12" ry="12" width="280" height="120"
+        class="level-micro" />
+  <text x="525" y="455" class="box-title">
+    Micro level: Individual CI users and decision episodes
+  </text>
+  <text x="525" y="473" class="box-text">
+    Scientists, CI engineers, data managers, communication staff,
+  </text>
+  <text x="525" y="488" class="box-text">
+    administrators
+  </text>
+  <text x="525" y="508" class="box-text">
+    → Situated decisions: adopt, adapt, resist, or work around CI;
+  </text>
+  <text x="525" y="523" class="box-text">
+    everyday reliance vs avoidance; trust or distrust in systems
+  </text>
+
+  <!-- Vertical influence arrows (macro -> meso -> micro) -->
+  <line x1="650" y1="235" x2="650" y2="275"
+        class="arrow" marker-end="url(#arrowhead)" />
+  <text x="660" y="255" class="box-text">influence</text>
+
+  <line x1="650" y1="395" x2="650" y2="435"
+        class="arrow" marker-end="url(#arrowhead)" />
+  <text x="660" y="415" class="box-text">influence</text>
+
+  <!-- Feedback arrows (micro -> meso -> macro) -->
+  <line x1="605" y1="435" x2="605" y2="395"
+        class="arrow feedback-arrow" marker-end="url(#arrowhead)" />
+  <line x1="605" y1="275" x2="605" y2="235"
+        class="arrow feedback-arrow" marker-end="url(#arrowhead)" />
+
+  <text x="612" y="265" class="box-text">feedback</text>
+  <text x="612" y="425" class="box-text">feedback</text>
+
+  <!-- ========== PREDICTIONS ========== -->
+
+  <!-- Prediction (c) between macro and meso -->
+  <rect x="805" y="210" rx="8" ry="8" width="200" height="80"
+        class="prediction-box" />
+  <text x="815" y="230" class="prediction-title">
+    Prediction (c)
+  </text>
+  <text x="815" y="245" class="prediction-text">
+    More explicit risk communication practices
+  </text>
+  <text x="815" y="260" class="prediction-text">
+    → more intentional CI reinvention,
+  </text>
+  <text x="815" y="275" class="prediction-text">
+    less ad hoc fixing
+  </text>
+
+  <!-- Prediction (a) near meso -->
+  <rect x="805" y="320" rx="8" ry="8" width="200" height="90"
+        class="prediction-box" />
+  <text x="815" y="338" class="prediction-title">
+    Prediction (a)
+  </text>
+  <text x="815" y="353" class="prediction-text">
+    Strong cross-boundary CoPs
+  </text>
+  <text x="815" y="368" class="prediction-text">
+    → more collaborative risk sensemaking
+  </text>
+  <text x="815" y="383" class="prediction-text">
+    → fewer unilateral workarounds
+  </text>
+
+  <!-- Prediction (b) between macro structures and micro use -->
+  <rect x="805" y="435" rx="8" ry="8" width="200" height="90"
+        class="prediction-box" />
+  <text x="815" y="453" class="prediction-title">
+    Prediction (b)
+  </text>
+  <text x="815" y="468" class="prediction-text">
+    More centralized decision structures
+  </text>
+  <text x="815" y="483" class="prediction-text">
+    with weaker CoPs
+  </text>
+  <text x="815" y="498" class="prediction-text">
+    → larger gaps between formal CI adoption
+  </text>
+  <text x="815" y="513" class="prediction-text">
+    and everyday use
+  </text>
+
+  <!-- ========== RIGHT COLUMN: OUTCOME TRAJECTORIES ========== -->
+
+  <rect x="965" y="210" rx="12" ry="12" width="210" height="220"
+        class="outcome-box" />
+  <text x="980" y="230" class="box-title outcome-text">
+    CI Adoption and Reinvention
+  </text>
+  <text x="980" y="246" class="box-title outcome-text">
+    Decision Trajectories
+  </text>
+  <text x="980" y="270" class="box-text outcome-text">
+    • Rapid but fragile adoption
+  </text>
+  <text x="980" y="288" class="box-text outcome-text">
+    • Slower, robust reinvention and routinization
+  </text>
+  <text x="980" y="306" class="box-text outcome-text">
+    • Persistent workarounds or partial abandonment
+  </text>
+  <text x="980" y="324" class="box-text outcome-text">
+    • Alignment or misalignment between
+  </text>
+  <text x="980" y="340" class="box-text outcome-text">
+      formal adoption and everyday use
+  </text>
+
+  <!-- Arrows from each level to outcome box -->
+  <line x1="790" y1="175" x2="965" y2="245"
+        class="arrow" marker-end="url(#arrowhead)" />
+  <line x1="790" y1="335" x2="965" y2="290"
+        class="arrow" marker-end="url(#arrowhead)" />
+  <line x1="790" y1="495" x2="965" y2="340"
+        class="arrow" marker-end="url(#arrowhead)" />
+
+  <text x="875" y="205" class="box-text">
+    Trajectories emerge from
+  </text>
+  <text x="875" y="220" class="box-text">
+    multi-level interactions
+  </text>
+
+</svg>
+
+</body>
+</html>
